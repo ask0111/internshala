@@ -154,14 +154,15 @@ document.querySelector('#smsbtn').addEventListener('click', (e)=>{
         c.style.border = val1;
         d.style.border = val1;
         name.focus();
+        return false;
     }
 
-    var bool = sms.value ? true : istrue(sms, telephone, email,lname, name);
-    var bool = telephone.value ? true : istrue(telephone, sms, email,lname, name)
-    var bool = email.value ? true : istrue(email, sms, telephone, lname, name)
-    var bool = lname.value ? true : istrue(lname, email, telephone, sms, name)
-    var bool = name.value ? true : istrue(name, email,lname, sms, telephone)
-    if(!bool){
+     var abool = sms.value ? true : istrue(sms, telephone, email,lname, name);
+     var bbool = telephone.value ?  true : istrue(telephone, sms, email,lname, name)
+     var cbool = email.value ? true : istrue(email, sms, telephone, lname, name)
+     var dbool = lname.value ? true : istrue(lname, email, telephone, sms, name)
+     var ebool = name.value ? true : istrue(name, email, lname, sms, telephone)
+    if(!abool || !bbool || !cbool || !dbool || !ebool){
         return alert('Please Fill All Columns...')
     }else{
         name.setAttribute('value', '');
