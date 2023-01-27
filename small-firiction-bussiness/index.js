@@ -33,10 +33,10 @@ var htmlNavbarCode = `<div class="nav-img navbar-main">
 var htmlFooterCode = `<div class="foot">
 <div class="store">
     <dir>
-        <img src="./google.png" alt="google play">
+        <img src="./images/google.png" alt="google play">
     </dir>
     <dir>
-        <img src="./app.png" alt="App Store">
+        <img src="./images/app.png" alt="App Store">
 
     </dir>
 </div>
@@ -113,19 +113,19 @@ var htmlFooterCode = `<div class="foot">
 </div>
     <div class="logo">
         <div class="facebook social">
-            <img  src="./gace.png" alt="">
+            <img  src="./images/gace.png" alt="">
         </div>
         <div class="instagram social">
-            <img src="./instagram.jpg" alt="">
+            <img src="./images/instagram.jpg" alt="">
         </div>
         <div class="twitter social">
-            <img src="./twitter.png" alt="">
+            <img src="./images/twitter.png" alt="">
         </div>
         <div class="linkdine social">
-            <img src="./linkdin.png" alt="">
+            <img src="./images/linkdin.png" alt="">
         </div>
         <div class="youtub social">
-            <img src="./youtub.png" alt="">
+            <img src="./images/youtub.png" alt="">
         </div>
     </div>
 </div>
