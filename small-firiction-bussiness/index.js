@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
         fix.style.width = '0px';
 
     } else {
-        fix.style.position = scrolly > 250 ? 'fixed' : 'static';
+        fix.style.position = scrolly > 250 ? 'fixed' :'static';
         fix.style.width = '20px';
     }
 })
@@ -23,7 +23,7 @@ var htmlNavbarCode = `<div class="nav-img navbar-main">
 </div>
 <div class="navbar-main">
 <a href="./index.html" class="home">Home</a>
-<a href="./about.html" class="about">Contact Us</a>
+<a href="./contactus.html" class="about">Contact Us</a>
 
 </div>
 <div class="nav-img navbar-main">
@@ -133,3 +133,51 @@ var htmlFooterCode = `<div class="foot">
 
 document.querySelector('.navbar').innerHTML = htmlNavbarCode;
 document.querySelector('footer').innerHTML = htmlFooterCode;
+
+document.querySelector('#smsbtn').addEventListener('click', (e)=>{
+    e.preventDefault()
+    var name = document.querySelector('#name');
+    var lname = document.querySelector('#lname');
+    var email = document.querySelector('#email');
+    var telephone = document.querySelector('#telephone');
+    var cname = document.querySelector('#cname');
+    var option = document.querySelector('#option');
+    var sms = document.querySelector('#sms');
+    var val = '2px solid red';
+    var val1 = 'none';
+
+
+    function istrue(name, a, b, c, d){
+        name.style.border = val;
+        a.style.border = val1;
+        b.style.border = val1;
+        c.style.border = val1;
+        d.style.border = val1;
+        name.focus();
+    }
+
+    var bool = sms.value ? true : istrue(sms, telephone, email,lname, name);
+    var bool = telephone.value ? true : istrue(telephone, sms, email,lname, name)
+    var bool = email.value ? true : istrue(email, sms, telephone, lname, name)
+    var bool = lname.value ? true : istrue(lname, email, telephone, sms, name)
+    var bool = name.value ? true : istrue(name, email,lname, sms, telephone)
+    if(!bool){
+        return alert('Please Fill All Columns...')
+    }else{
+        name.setAttribute('value', '');
+        lname.setAttribute('value', '');
+        email.setAttribute('value', '');
+        telephone.setAttribute('value', '');
+        sms.setAttribute('value', '');
+        window.location.reload()
+        return alert('Thanks, Our Team Contact to You...')
+    }
+
+})
+
+
+
+document.querySelector('#emailbtn').addEventListener('click', (e)=>{
+    e.preventDefault()
+    return alert('Send Email..')
+})
