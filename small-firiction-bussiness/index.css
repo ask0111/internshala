@@ -1,7 +1,7 @@
 *{
     font-family: "Gill Sans", sans-serif;
-    margin: 0;
     font-family: acumin-pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    margin: 0;
     padding: 0;
 }
 
@@ -77,7 +77,7 @@ img{
 }
 .left-section{
     /* position: absolute; */
-    float: left;
+    /* float: left; */
     display: flex;
     justify-content: center;
     
@@ -88,14 +88,13 @@ img{
     /* border: 1px solid red; */
 }
 .parts{
-    /* border: 1px solid red; */
-    /* float: left; */
     
-    /* margin-top: 400px; */
     top: 100px;
-    width: 10%;
-    position:static;
+    width: 20px;
+    position: static;
     margin: auto;
+
+    
 }
 .parts div{
     width: 100%;
@@ -173,6 +172,7 @@ p, h1, img, hr{
 
 footer{
     padding: 100px 0;
+    
     width: 100%;
     background-color: rgb(33, 33, 75);
     color: white;
@@ -233,9 +233,13 @@ h4{
     .left-section, .right-section{
         width: 10%;
     }
+    footer{
+        width: 100%;
+        
+    }
 }
 @media screen and (min-width: 80px) and (max-width: 650px){
-
+    
     .fsb{
         width: 100%;
     }
@@ -253,8 +257,8 @@ h4{
     }
     .parts{
         display: flex;
-        /* position: none; */
         width: 100%;
+        position: static;
         justify-content: center;
     }
     
@@ -266,7 +270,7 @@ h4{
     #btns{
         display: inline;
     }
-
+    
     .aboutauthor{
         display: inline;
         text-align: center;
@@ -274,14 +278,15 @@ h4{
     .img{
         margin: auto;
     }
-
+    
     .authpera{
         width: 100%;
     }
-
+    
     .footer{
         margin: auto;
         width: 100%;
+        
     }
     .foot{
         display: inline;
